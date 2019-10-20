@@ -1,0 +1,24 @@
+p {
+  font-family: Arial;
+  font-size: 25px;
+  font-weight: bold;
+  font-style: italic;
+  text-decoration: underline;
+  text-align: center;
+}
+
+body {
+  background-image: url("https://images3.alphacoders.com/621/621682.jpg");
+  background-size: cover;
+}
+
+h1 {
+  background-color: rgba(0,0,0,0.5);
+  color: #EEEE0C;
+}
+
+h2 {
+  background-color: black;
+  color: #EEEE0C;
+  opacity: 0.6;
+}

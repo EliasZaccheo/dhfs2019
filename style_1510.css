@@ -1,0 +1,60 @@
+div {
+  border: 1px;
+  padding: 5px;
+  margin: 10px;
+  width: 100px;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: black;
+  color: white;
+  font-size: 28px;
+  border-style: solid;
+  border: 1px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+section {
+  width: 50%;
+  margin-left: 25%;
+  background-color: gainsboro;
+  margin-bottom: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  border-style: dashed;
+  border-color: black;
+  border: 2px;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  border-style: solid;
+  border-color: red;
+  border: 1px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  height: 40px;
+  box-sizing: border-box;
+}
+
+
+section {
+  overflow: hidden;
+}
+
+article {
+  float: left;
+  width: 20%;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  box-sizing: border-box;
+}
