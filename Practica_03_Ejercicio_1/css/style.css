@@ -1,0 +1,151 @@
+body {
+  background-image: url('../images/bg-body.png');
+  background-repeat: repeat;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container{
+  margin-left: 0;
+  margin-right: 0;
+  width: auto;
+  }
+
+.main-header{
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+.logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+ul {
+  padding-left: 0px;
+  background-size: contain;
+  width: 100%;
+}
+
+ul li{
+  list-style-type: none;
+  background-size: contain;
+  width: 100%;
+  padding-top: 1px;
+}
+
+ul li a {
+  display: block;
+  cursor: none;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: grey;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.banner{
+  width: 100%;
+}
+
+.photo-container{
+  padding-top: 30px;
+  width: 100%;
+  position: relative;
+}
+
+.zoom{
+  text-transform: uppercase;
+  font-weight: bold;
+  background-color: rgba(255,255,255,0.20);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 35%;
+  padding-right: 35%;
+  min-width: 30%;
+  align-items: center;
+
+
+}
+
+.photo {
+  width: 100%;
+}
+
+.special{
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
+
+
+
+
+
+
+
+
+/*netbooks*/
+@media (min-width: 500px) {
+  body {
+    background-image: none;
+    background-color: red;
+  }
+
+
+  .main-nav ul {
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    background-size: contain;
+    width: contain;
+    text-align: center;
+  }
+
+  .main-nav ul li{
+    padding: 1%;
+    padding-top: 0px;
+    display: inline;
+
+  }
+
+  .main-nav ul li a {
+    padding-left: 1px;
+    padding-right: 1px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    display: inline;
+    text-align: auto;
+  }
+
+  .vip-products{
+    display: block;
+    position: relative;
+  }
+
+  .product{
+    float: right;
+    margin: 1%;
+    width: 48%;
+  }
+
+}
+
+
+
+/*desktop (only portrait)*/
+@media (min-width: 1030px) {
+body {
+  background-image: none;
+  background-color: green;
+}
+}
