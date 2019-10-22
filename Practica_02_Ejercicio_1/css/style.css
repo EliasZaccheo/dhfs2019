@@ -1,0 +1,39 @@
+body{
+  width: 960px;
+}
+
+.A {
+  border-bottom: 1px;
+}
+
+header {
+  padding-bottom: 20px;
+  border: 1px;
+}
+
+.B {
+  float: left;
+  width: 300px;
+}
+
+.C {
+  float: right;
+  width: 610px;
+  border-left: 1px;
+}
+
+.D {
+  padding: 20px;
+}
+
+.pad {
+  padding: 15px;
+}
+
+.nombre_plato {
+  font-weight: bold;
+}
+
+.plato {
+  padding-left: 20px;
+}
