@@ -1,0 +1,10 @@
+Formularios.
+
+form
+	Contiene el método de envío y la dirección
+
+label
+	Contiene el enunciado de la información requerida. 
+
+input
+	Contiene el tipo, el id, el valor por defecto (etc) de la información requerida. input.id = label.for

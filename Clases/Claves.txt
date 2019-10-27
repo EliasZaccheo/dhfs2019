@@ -1,0 +1,34 @@
+Permisos en proyecto:
+	sudo chown -R eliasz:eliasz /opt/lampp/htdocs
+
+Git:
+	cd /opt/lampp/htdocs
+		Situa el prompt en la carpeta de xampp
+
+	git remote -v
+		Retorna el nombre de todos los repositorios asociados
+
+	git remote add ALIAS http://github.com/USUARIO/REPOSITORIO
+		Añade con el nombre ALIAS el repositorio
+		Hay que situarse en la carpeta donde se clona el proyecto
+
+	git clone REPOSITORIO
+		Clona el repositorio. Puede ser un alias o la URL del repositorio
+
+	git fetch REPO
+		Busca el repositorio, REPO puede ser el alias o la URL
+
+	git pull REPO
+		Recupera y une el repositorio, REPO puede ser el alias o la URL
+
+	git add FILE/PATH
+		Añade al 'paquete' los archivos o directorios indicados.
+
+	git commit -m "MENSAJE"
+		Añade al 'paquete' el mensaje MENSAJE, normalmente una descripción de los cambios.
+
+	git push ALIAS BRANCH
+		Sube al repositorio ALIAS el 'paquete' como rama BRANCH. Si BRANCH=master, se toma esta como la troncal vigente.
+
+	
+	
