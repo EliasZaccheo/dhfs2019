@@ -147,5 +147,8 @@
     case 10:
       echo "Excelente!!!";
     break;
+    default:
+      echo "El número no es válido";
+    break;
   }
 ?>
