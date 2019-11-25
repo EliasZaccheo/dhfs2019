@@ -94,8 +94,45 @@ function validarEmail() {
   }
 }
 
-function validarPass() {
 
+function validarEmail() {
+  if (isset($_POST["email"])){
+    $ret;
+    if (strlen($_POST["email"])<1){
+      $ret = "El campo esta vacio";
+    }else{
+      if (!(filter_var($_POST["email"],FILTER_VALIDATE_EMAIL))){
+        $ret="El campo no es un email";
+      }else{
+        $ret="Correcto";
+      }
+    }
+    return $ret;
+  }
+  return "El campo esta vacio";
+}
+
+function validarPass() {
+  if ($_POST){
+    if ((isset($_POST["password"]))&&(isset($_POST["confirmar"]))){
+      if (strlen($_POST["password"])<1){
+        $ret = "La contraseña esta vacia";
+      }else{
+        if (strlen($_POST["confirmar"])<1){
+          $ret = "Falta la confirmacion de contraseña";
+        }else{
+          if ($_POST["password"]==$_POST["confirmar"]){
+            $ret = "Correcto";
+          }else{
+            $ret="Las contraseñas no verifican;"
+          }
+        }
+      }
+    }else{
+      $ret = "Los dos campos de contraseña estan vacios";
+    }
+    return $ret;
+  }
 }
 
  ?>
