@@ -1,5 +1,35 @@
 <?PHP
+  $username = null;
+  $name=null;
+  $email=null;
+  if ($_POST){
+    if ((strlen($_POST["name"])>0) &&
+        (strlen($_POST["name"])<50) &&
+        (filter_var($_POST["email"],FILTER_VALIDATE_EMAIL)) &&
+        (strlen($_POST["email"])<50) &&
+        (strlen($_POST["username"])>0) &&
+        (strlen($_POST["username"])<50) &&
+        (strlen($_POST["password"])<50) &&
+        (strlen($_POST["password"])>6)
+      ){
+      $user =[
+        "name" => $_POST["name"],
+        "username" => $_POST["username"],
+        "email" => $_POST["email"],
+        "password" => password_hash($_POST["password"],PASSWORD_DEFAULT)
+      ];
+      file_put_contents("usuarios.json",json_encode($user));
+      file_put_contents
+      echo "Bienvenido";
+      //header('Location: bienvenido.php');
+      //exit;
+    }else{
+      $name = strlen($_POST['name'])>0 ? $_POST['name'] : null;
+      $username = strlen($_POST['username'])>0 ? $_POST['username'] : null;
+      $email= filter_var($_POST["email"],FILTER_VALIDATE_EMAIL) ? $_POST["email"] : null;
+    }
 
+  }
 ?>
 <!DOCTYPE html>
 <html>
@@ -10,7 +40,7 @@
 <body>
 
     <div id='fg_membersite'>
-        <form id='register' action='' method='post'>
+        <form id='register' action='register.php' method='post'>
             <fieldset >
                 <legend>Registrate</legend>
 
@@ -22,17 +52,17 @@
                 <div><span class='error'></span></div>
                 <div class='container'>
                     <label for='name' >Nombre completo: </label><br/>
-                    <input type='text' name='name' id='name' value='' maxlength="50" /><br/>
+                    <input type='text' name='name' id='name' value='<?= $name ?>' maxlength="50" /><br/>
                     <span id='register_name_errorloc' class='error'></span>
                 </div>
                 <div class='container'>
                     <label for='email' >Email:</label><br/>
-                    <input type='text' name='email' id='email' value='' maxlength="50" /><br/>
+                    <input type='text' name='email' id='email' value='<?= $email ?>' maxlength="50" /><br/>
                     <span id='register_email_errorloc' class='error'></span>
                 </div>
                 <div class='container'>
                     <label for='username' >Nombre de usuario*:</label><br/>
-                    <input type='text' name='username' id='username' value='' maxlength="50" /><br/>
+                    <input type='text' name='username' id='username' value='<?= $username ?>' maxlength="50" /><br/>
                     <span id='register_username_errorloc' class='error'></span>
                 </div>
                 <div class='container' style='height:80px;'>
