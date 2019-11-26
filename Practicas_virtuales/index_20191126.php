@@ -1,4 +1,4 @@
-<<?php
+<?php
 function validarAvatar() {
   if ($_FILES){
     if ($_FILES["avatar"]["error"] == UPLOAD_ERR_OK){

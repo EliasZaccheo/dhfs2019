@@ -12,14 +12,14 @@
         (strlen($_POST["password"])<50) &&
         (strlen($_POST["password"])>6)
       ){
-      $user =[
+      $usuarios=json_decode(file_get_contents("usuarios.json"),true);
+      $usuarios[]=[
         "name" => $_POST["name"],
         "username" => $_POST["username"],
         "email" => $_POST["email"],
         "password" => password_hash($_POST["password"],PASSWORD_DEFAULT)
       ];
-      file_put_contents("usuarios.json",json_encode($user));
-      file_put_contents
+      file_put_contents("usuarios.json",json_encode($usuarios));
       echo "Bienvenido";
       //header('Location: bienvenido.php');
       //exit;
@@ -44,10 +44,10 @@
             <fieldset >
                 <legend>Registrate</legend>
 
-                <input type='hidden' name='submitted' id='submitted' value='1'/>
+
 
                 <div class='short_explanation'>* campos requeridos</div>
-                <input type='text' class='spmhidip' name='' />
+
 
                 <div><span class='error'></span></div>
                 <div class='container'>
