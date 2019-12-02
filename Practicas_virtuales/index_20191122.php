@@ -95,7 +95,7 @@ function validarEmail() {
 }
 
 
-function validarEmail() {
+function validarEmail_v2() {
   if (isset($_POST["email"])){
     $ret;
     if (strlen($_POST["email"])<1){
@@ -124,7 +124,7 @@ function validarPass() {
           if ($_POST["password"]==$_POST["confirmar"]){
             $ret = "Correcto";
           }else{
-            $ret="Las contraseñas no verifican;"
+            $ret="Las contraseñas no verifican";
           }
         }
       }
