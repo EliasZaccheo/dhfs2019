@@ -59,3 +59,13 @@
     $contadorGlobal++;
   }
  ?>
+
+ <?php
+ function bucles($numeros) {
+   $resultado = 0;
+  foreach ($numeros as $key => $value) {
+    $resultado=$resultado+$value;
+  }
+   return $resultado;
+ }
+  ?>
